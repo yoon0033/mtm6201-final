@@ -1,3 +1,10 @@
+:root {
+  --bs-primary: #c12525; 
+  --bs-body-bg: #f8f9fa;
+  --bs-font-size-base: 1rem; 
+  --bs-border-radius: 0.25rem; 
+}
+
 #hero {
   background-image: url('../images/home-main.jpg');
   background-position: center center;
@@ -34,6 +41,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: var(--bs-border-radius); 
 }
 
 .card-body {
@@ -57,14 +65,14 @@
 }
 
 .bordered-box {
-  border: 2px solid #c12525; 
+  border: 2px solid var(--bs-primary); 
   padding: 40px;
   width: auto; 
   margin: 0 auto; 
 }
 
 .text-highlight {
-  color: #c12525; 
+  color: var(--bs-primary); 
   font-style: italic; 
 }
 
@@ -94,12 +102,27 @@ img {
 }
 
 
+a:hover, a:focus, button:hover, button:focus {
+  color: var(--bs-primary);
+  text-decoration: underline;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
 
 @media (min-width: 768px) {
+  .hero-content {
+    min-height: 60vh;
+  }
 }
 
 @media (min-width: 992px) {
+  .hero-content {
+    min-height: 50vh;
+  }
 }
 
 @media (min-width: 1200px) {
+  .hero-content {
+    min-height: 40vh;
+  }
 }
